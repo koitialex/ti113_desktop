@@ -6,17 +6,19 @@
     {
         static void Main(string[] args)
         {
-            float renda;
-            Console.WriteLine("Digite um nome:");
+            double renda;
+            Console.Write("Digite um nome:");
             string nome = Console.ReadLine()!;
-            Console.WriteLine("Quando ganha por hora:");
-            float dinheiro = float.Parse(Console.ReadLine()!);
-            Console.WriteLine("Numero de horas no mês");
-            float horas = float.Parse(Console.ReadLine()!);
+
+            Console.Write("Quando ganha por hora:");
+            double dinheiro = Convert.ToInt16(Console.ReadLine());
+
+            Console.Write("Numero de horas no mês");
+            short horas = Convert.ToInt16(Console.ReadLine());
 
             renda = dinheiro * horas;
 
-            Console.WriteLine($"O {nome} tem uma renda mensal de ${renda}");
+            Console.Write($"O {nome} tem uma renda mensal de ${renda}");
         }
     }
 }
